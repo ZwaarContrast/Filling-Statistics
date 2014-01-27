@@ -1,0 +1,273 @@
+@import "_variables";
+
+/* Positioning */
+/* Display and Box model */
+/* Element styling */
+/* Text styling */
+/* Other */
+/* Transitions, Animations and Includes */
+/* Pseudo elements */
+/* Behaviour */
+/* Mediaqueries */
+/* Child elements*/
+
+/* Statistics Element */
+.statistic {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	border-style: solid;
+	@include box-sizing(border-box);
+}
+
+.statistic-big {
+	width: 250px;
+	height: 250px;
+	border-radius: 250px;
+	border-width: 16px;
+	margin-bottom: 16px;
+}
+
+.statistic-medium {
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	border-width: 12px;
+	margin-bottom: 12px;
+}
+
+.statistic-small {
+	width: 110px;
+	height: 110px;
+	border-radius: 110px;
+	border-width: 8px;
+	margin-bottom: 8px;
+}
+
+.statistic-green {
+	border-color: $color-green-light; 
+}
+
+.statistic-dark-blue {
+	border-color: $color-dark-blue-light; 
+}
+
+.statistic-aqua {
+	border-color: $color-aqua-light;
+}
+
+
+/* Slice wrapper */
+.statistic-wrapper {
+	position: absolute;
+	left: 0;
+	top: 0; 
+}
+
+.statistic-big .statistic-wrapper {
+	width: 250px;
+	height: 250px;
+	margin: -16px 0 0 -16px;
+	clip: rect(0px, 250px, 250px, 125px); 
+}
+
+.statistic-medium .statistic-wrapper {
+	width: 200px;
+	height: 200px;
+	margin: -12px 0 0 -12px;
+	clip: rect(0px, 200px, 200px, 100px); 
+}
+
+.statistic-small .statistic-wrapper {
+	width: 110px;
+	height: 110px;
+	margin: -8px 0 0 -8px;
+	clip: rect(0px, 110px, 110px, 55px); 
+}
+
+.statistic-wrapper.statistic-wrapper-halfway {
+	clip: auto; 
+}
+
+
+/* Slices */
+.statistic-slice {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border-style: solid;
+	@include box-sizing(border-box);
+}
+
+.statistic-slice-right {
+	@include transform(rotate(180deg));
+	display: none; 
+}
+
+.statistic-wrapper-halfway .statistic-slice-right {
+	display: block;
+}
+
+.statistic-big .statistic-slice {
+	border-radius: 250px;
+	border-width: 16px;
+	clip: rect(0px, 125px, 250px, 0px);
+}
+
+.statistic-medium .statistic-slice {
+	border-radius: 200px;
+	border-width: 12px;
+	clip: rect(0px, 100px, 200px, 0px);
+}
+
+.statistic-small .statistic-slice {
+	border-radius: 110px;
+	border-width: 8px;
+	clip: rect(0px, 55px, 110px, 0px);
+}
+
+.statistic-green .statistic-slice {
+	border-color: $color-green;
+}
+
+.statistic-dark-blue .statistic-slice {
+	border-color: $color-dark-blue;
+}
+
+.statistic-aqua .statistic-slice {
+	border-color: $color-aqua;
+}
+
+/* Percentage styling */
+.statistic-percentage {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	font-family: 'museo300';
+	text-align: center;
+}
+
+.statistic-big .statistic-percentage {
+	font-size: 55px;
+	line-height: 55px;
+	margin-top: -25px;
+}
+
+.statistic-medium .statistic-percentage {
+	font-size: 24px;
+	line-height: 40px;
+	margin-top: -20px;
+}
+
+.statistic-small .statistic-percentage {
+	font-size: 32px;
+	line-height: 24px;
+	margin-top: -12px;
+}
+
+.statistic-green .statistic-percentage {
+	color: #2b8e43;
+}
+
+.statistic-dark-blue .statistic-percentage {
+	color: #324072;
+}
+
+.statistic-aqua .statistic-percentage {
+	color: #56a5b5;
+}
+
+/* Triangle thingy under statistics */
+.statistic:after, .statistic:before {
+	content: '';
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	border-style: solid;
+	left: 50%;
+	@include transition(border-color 200ms ease-in);
+}
+.statistic:after {
+	z-index: 1;
+}
+
+.statistic:before {
+	z-index: 2;
+	@include transition(clip 200ms);
+}
+.statistic-big:after, .statistic-big:before {
+	bottom: -31px;
+	margin-left: -13px;
+	border-width: 16px 13px 0 13px;
+}
+.statistic-big:before {
+	clip: rect(0px, 26px, 16px, 26px);
+}
+.statistic-big.statistic-halfway:before {
+	clip: rect(0px, 26px, 16px, 0px);
+}
+
+.statistic-medium:after, .statistic-medium:before {
+	bottom: -23px;
+	margin-left: -10.5px;
+	border-width: 12px 10.5px 0 10.5px;
+}
+.statistic-medium:before {
+	clip: rect(0px, 21px, 12px, 21px);
+}
+.statistic-medium.statistic-halfway:before {
+	clip: rect(0px, 21px, 12px, 0px);
+}
+
+.statistic-small:after, .statistic-small:before {
+	bottom: -16px;
+	margin-left: -7.5px;
+	border-width: 9px 7.5px 0 7.5px;
+}
+.statistic-small:before {
+	clip: rect(0px, 15px, 9px, 15px);
+}
+.statistic-small.statistic-halfway:before {
+	clip: rect(0px, 15px, 9px, 0px);
+}
+
+.statistic-green:after {
+	border-color: $color-green-light transparent transparent transparent;
+}
+.statistic-green:before {
+	border-color: $color-green transparent transparent transparent;
+}
+
+.statistic-aqua:after {
+	border-color: $color-aqua-light transparent transparent transparent;
+}
+.statistic-aqua:before {
+	border-color: $color-aqua transparent transparent transparent;
+}
+
+.statistic-dark-blue:after {
+	border-color: $color-dark-blue-light transparent transparent transparent; 
+}
+.statistic-dark-blue:before {
+	border-color: $color-dark-blue transparent transparent transparent;
+}
+
+/* Description beneath the statistic */
+.statistic-description{
+	text-align:center;
+	font-family:'museo300';
+	margin: 1em 0 0 0;
+}
+.statistic-description-big{
+	font-size: 30px;
+}
+.statistic-description-medium{
+	font-size: 30px;
+}
+.statistic-description-small{
+	font-size: 18px;
+	margin: 16px 0 15px 0;
+}

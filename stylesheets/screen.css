@@ -1,0 +1,361 @@
+/* Positioning */
+/* Display and Box model */
+/* Element styling */
+/* Text styling */
+/* Other */
+/* Transitions, Animations and Includes */
+/* Pseudo elements */
+/* Behaviour */
+/* Mediaqueries */
+/* Child elements*/
+/* line 15, ../sass/screen.scss */
+body {
+  background-color: #fff;
+}
+
+/* Positioning */
+/* Display and Box model */
+/* Element styling */
+/* Text styling */
+/* Other */
+/* Transitions, Animations and Includes */
+/* Pseudo elements */
+/* Behaviour */
+/* Mediaqueries */
+/* Child elements*/
+/* Statistics Element */
+/* line 15, ../sass/_statistics.scss */
+.statistic {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  border-style: solid;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 23, ../sass/_statistics.scss */
+.statistic-big {
+  width: 250px;
+  height: 250px;
+  border-radius: 250px;
+  border-width: 16px;
+  margin-bottom: 16px;
+}
+
+/* line 31, ../sass/_statistics.scss */
+.statistic-medium {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  border-width: 12px;
+  margin-bottom: 12px;
+}
+
+/* line 39, ../sass/_statistics.scss */
+.statistic-small {
+  width: 110px;
+  height: 110px;
+  border-radius: 110px;
+  border-width: 8px;
+  margin-bottom: 8px;
+}
+
+/* line 47, ../sass/_statistics.scss */
+.statistic-green {
+  border-color: #a8baa8;
+}
+
+/* line 51, ../sass/_statistics.scss */
+.statistic-dark-blue {
+  border-color: #a7a8b8;
+}
+
+/* line 55, ../sass/_statistics.scss */
+.statistic-aqua {
+  border-color: #bed2d4;
+}
+
+/* Slice wrapper */
+/* line 61, ../sass/_statistics.scss */
+.statistic-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* line 67, ../sass/_statistics.scss */
+.statistic-big .statistic-wrapper {
+  width: 250px;
+  height: 250px;
+  margin: -16px 0 0 -16px;
+  clip: rect(0px, 250px, 250px, 125px);
+}
+
+/* line 74, ../sass/_statistics.scss */
+.statistic-medium .statistic-wrapper {
+  width: 200px;
+  height: 200px;
+  margin: -12px 0 0 -12px;
+  clip: rect(0px, 200px, 200px, 100px);
+}
+
+/* line 81, ../sass/_statistics.scss */
+.statistic-small .statistic-wrapper {
+  width: 110px;
+  height: 110px;
+  margin: -8px 0 0 -8px;
+  clip: rect(0px, 110px, 110px, 55px);
+}
+
+/* line 88, ../sass/_statistics.scss */
+.statistic-wrapper.statistic-wrapper-halfway {
+  clip: auto;
+}
+
+/* Slices */
+/* line 94, ../sass/_statistics.scss */
+.statistic-slice {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-style: solid;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 104, ../sass/_statistics.scss */
+.statistic-slice-right {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  display: none;
+}
+
+/* line 109, ../sass/_statistics.scss */
+.statistic-wrapper-halfway .statistic-slice-right {
+  display: block;
+}
+
+/* line 113, ../sass/_statistics.scss */
+.statistic-big .statistic-slice {
+  border-radius: 250px;
+  border-width: 16px;
+  clip: rect(0px, 125px, 250px, 0px);
+}
+
+/* line 119, ../sass/_statistics.scss */
+.statistic-medium .statistic-slice {
+  border-radius: 200px;
+  border-width: 12px;
+  clip: rect(0px, 100px, 200px, 0px);
+}
+
+/* line 125, ../sass/_statistics.scss */
+.statistic-small .statistic-slice {
+  border-radius: 110px;
+  border-width: 8px;
+  clip: rect(0px, 55px, 110px, 0px);
+}
+
+/* line 131, ../sass/_statistics.scss */
+.statistic-green .statistic-slice {
+  border-color: #29852b;
+}
+
+/* line 135, ../sass/_statistics.scss */
+.statistic-dark-blue .statistic-slice {
+  border-color: #324072;
+}
+
+/* line 139, ../sass/_statistics.scss */
+.statistic-aqua .statistic-slice {
+  border-color: #56a5b5;
+}
+
+/* Percentage styling */
+/* line 144, ../sass/_statistics.scss */
+.statistic-percentage {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  font-family: 'museo300';
+  text-align: center;
+}
+
+/* line 153, ../sass/_statistics.scss */
+.statistic-big .statistic-percentage {
+  font-size: 55px;
+  line-height: 55px;
+  margin-top: -25px;
+}
+
+/* line 159, ../sass/_statistics.scss */
+.statistic-medium .statistic-percentage {
+  font-size: 24px;
+  line-height: 40px;
+  margin-top: -20px;
+}
+
+/* line 165, ../sass/_statistics.scss */
+.statistic-small .statistic-percentage {
+  font-size: 32px;
+  line-height: 24px;
+  margin-top: -12px;
+}
+
+/* line 171, ../sass/_statistics.scss */
+.statistic-green .statistic-percentage {
+  color: #2b8e43;
+}
+
+/* line 175, ../sass/_statistics.scss */
+.statistic-dark-blue .statistic-percentage {
+  color: #324072;
+}
+
+/* line 179, ../sass/_statistics.scss */
+.statistic-aqua .statistic-percentage {
+  color: #56a5b5;
+}
+
+/* Triangle thingy under statistics */
+/* line 184, ../sass/_statistics.scss */
+.statistic:after, .statistic:before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-style: solid;
+  left: 50%;
+  -webkit-transition: border-color 200ms ease-in;
+  -moz-transition: border-color 200ms ease-in;
+  -o-transition: border-color 200ms ease-in;
+  transition: border-color 200ms ease-in;
+}
+
+/* line 193, ../sass/_statistics.scss */
+.statistic:after {
+  z-index: 1;
+}
+
+/* line 197, ../sass/_statistics.scss */
+.statistic:before {
+  z-index: 2;
+  -webkit-transition: clip 200ms;
+  -moz-transition: clip 200ms;
+  -o-transition: clip 200ms;
+  transition: clip 200ms;
+}
+
+/* line 201, ../sass/_statistics.scss */
+.statistic-big:after, .statistic-big:before {
+  bottom: -31px;
+  margin-left: -13px;
+  border-width: 16px 13px 0 13px;
+}
+
+/* line 206, ../sass/_statistics.scss */
+.statistic-big:before {
+  clip: rect(0px, 26px, 16px, 26px);
+}
+
+/* line 209, ../sass/_statistics.scss */
+.statistic-big.statistic-halfway:before {
+  clip: rect(0px, 26px, 16px, 0px);
+}
+
+/* line 213, ../sass/_statistics.scss */
+.statistic-medium:after, .statistic-medium:before {
+  bottom: -23px;
+  margin-left: -10.5px;
+  border-width: 12px 10.5px 0 10.5px;
+}
+
+/* line 218, ../sass/_statistics.scss */
+.statistic-medium:before {
+  clip: rect(0px, 21px, 12px, 21px);
+}
+
+/* line 221, ../sass/_statistics.scss */
+.statistic-medium.statistic-halfway:before {
+  clip: rect(0px, 21px, 12px, 0px);
+}
+
+/* line 225, ../sass/_statistics.scss */
+.statistic-small:after, .statistic-small:before {
+  bottom: -16px;
+  margin-left: -7.5px;
+  border-width: 9px 7.5px 0 7.5px;
+}
+
+/* line 230, ../sass/_statistics.scss */
+.statistic-small:before {
+  clip: rect(0px, 15px, 9px, 15px);
+}
+
+/* line 233, ../sass/_statistics.scss */
+.statistic-small.statistic-halfway:before {
+  clip: rect(0px, 15px, 9px, 0px);
+}
+
+/* line 237, ../sass/_statistics.scss */
+.statistic-green:after {
+  border-color: #a8baa8 transparent transparent transparent;
+}
+
+/* line 240, ../sass/_statistics.scss */
+.statistic-green:before {
+  border-color: #29852b transparent transparent transparent;
+}
+
+/* line 244, ../sass/_statistics.scss */
+.statistic-aqua:after {
+  border-color: #bed2d4 transparent transparent transparent;
+}
+
+/* line 247, ../sass/_statistics.scss */
+.statistic-aqua:before {
+  border-color: #56a5b5 transparent transparent transparent;
+}
+
+/* line 251, ../sass/_statistics.scss */
+.statistic-dark-blue:after {
+  border-color: #a7a8b8 transparent transparent transparent;
+}
+
+/* line 254, ../sass/_statistics.scss */
+.statistic-dark-blue:before {
+  border-color: #324072 transparent transparent transparent;
+}
+
+/* Description beneath the statistic */
+/* line 259, ../sass/_statistics.scss */
+.statistic-description {
+  text-align: center;
+  font-family: 'museo300';
+  margin: 1em 0 0 0;
+}
+
+/* line 264, ../sass/_statistics.scss */
+.statistic-description-big {
+  font-size: 30px;
+}
+
+/* line 267, ../sass/_statistics.scss */
+.statistic-description-medium {
+  font-size: 30px;
+}
+
+/* line 270, ../sass/_statistics.scss */
+.statistic-description-small {
+  font-size: 18px;
+  margin: 16px 0 15px 0;
+}
